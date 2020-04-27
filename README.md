@@ -1,4 +1,4 @@
-# STREAMNETFY README <!-- omit in toc -->
+# Streamnetfy <!-- omit in toc -->
 
 - [Project Planning](#Project-Planning)
   - [Overview](#Overview)
@@ -18,15 +18,15 @@
 
 ## Project Planning
 
-> The Project Planning section should be completed for your project pitch with instructors.
+> I plan to use the TV Maze API to create a website for people to search about TV shows.
 >
-> To ensure correct Markdown, I recommend cloning this wiki and copy/pasting the raw template code.
+> The user will be able to search and see all the information available about the shows.
 
 <br>
 
 ### Overview
 
-_**STREAMNETFY** is a website to search for tv shows information._
+_**Streamnetfy** is a website to search for tv shows information._
 
 <br>
 
@@ -34,47 +34,38 @@ _**STREAMNETFY** is a website to search for tv shows information._
 
 > Use the Wireframes section to display desktop, tablet and mobile views.
 
-![Dummy Link](url)
+![Dummy Link](https://res.cloudinary.com/abetavarez/image/upload/v1588016434/Screen_Shot_2020-04-27_at_3.17.46_PM_aizegs.png)
 
 - Desktop Landing
 
-![Dummy Link](url)
+![Dummy Link](https://res.cloudinary.com/abetavarez/image/upload/v1588016430/Screen_Shot_2020-04-27_at_3.25.53_PM_kgyyyp.png)
 
-- Desktop Body
+- iPad / Table
 
-![Dummy Link](url)
+![Dummy Link](https://res.cloudinary.com/abetavarez/image/upload/v1588016428/Screen_Shot_2020-04-27_at_3.39.09_PM_kjnxf9.png)
 
-- Desktop Resource Index
+- iPhone / Mobile
 
-![Dummy Link](url)
+![Dummy Link](https://res.cloudinary.com/abetavarez/image/upload/v1588016437/Screen_Shot_2020-04-27_at_2.55.17_PM_irm0qv.png)
 
-- Desktop Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+- Wireframe
 
 <br>
 
 ### MVP
 
-> The Minimum Viable Product should be a well-planned and easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
+> The Minimum Viable Product
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_**Streamnetfy** MVP user shold be able to see random tv shows dispay in the main page and user should have the ability to search for tv shows and see all information about the show._
 
 <br>
 
 #### Goals
 
 - _Find a good APi._
-- _Create a website to retrive data from api and display data to the user using React._
+- _Create a website to retrive data from API and display data to the user using React._
 - _Add different funtionalities to the site, search etc._
-- _Apply CSS or other CSS libraries._
-- _etc._
+- _Apply CSS or other CSS libraries to styled the site and media queries._
 
 <br>
 
@@ -86,7 +77,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 | :----------: | :------------------------------------------------ |
 | React Router | _Allow single page site to have multiples paths._ |
 |    Axios     | _Helps to create Api calls easier._               |
-|    React     | _Lorem ipsum dolor sit amet, consectetur._        |
+|     Jest     | _App testing TDD._                                |
 
 <br>
 
@@ -133,13 +124,15 @@ src
 
 > Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
-|  Component   |    Type    | state | props | Description                                                      |
-| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+| Component  |    Type    | state | props | Description                                                       |
+| :--------: | :--------: | :---: | :---: | :---------------------------------------------------------------- |
+|   Header   | functional |   n   |   n   | _The header will contain the navigation and logo._                |
+| Navigation | functional |   n   |   n   | _The navigation will provide a link to each of the pages._        |
+|   Search   | functional |   n   |   n   | _The search will allow user to search._                           |
+|  TV Shows  |   class    |   y   |   n   | _The tv shows will render the tv shows using tv show in flexbox._ |
+|  TV Show   | functional |   n   |   y   | _The tv show will render the show info via props._                |
+|   About    | functional |   n   |   n   | _The about will contain info about the developer etc._            |
+|   Footer   | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._  |
 
 <br>
 
@@ -149,11 +142,16 @@ src
 >
 > Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Task       | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------- | :------: | :------------: | :-----------: | :---------: |
+| Header     |    H     |     3 hrs      |     0 hrs     |     TBD     |
+| Navegation |    H     |     4 hrs      |     0 hrs     |     TBD     |
+| Search     |    H     |     4 hrs      |     0 hrs     |     TBD     |
+| TV Shows   |    H     |     6 hrs      |     0 hrs     |     TBD     |
+| TV Show    |    H     |     8 hrs      |     0 hrs     |     TBD     |
+| About      |    L     |     3 hrs      |     0 hrs     |     TBD     |
+| Footer     |    H     |     3 hrs      |     0 hrs     |     TBD     |
+| TOTAL      |          |     31 hrs     |     3 hrs     |     TBD     |
 
 <br>
 
