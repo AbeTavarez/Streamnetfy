@@ -20,19 +20,24 @@
 
 > I plan to use the TV Maze API to create a website for people to search about TV shows.
 >
-> The user will be able to search and see all the information available about the shows.
+> The user will be able to search and see all the information available about the shows and where to watch them.
+>
+> I'll be using Axios and Jest to build my app.
 
 <br>
 
 ### Overview
 
-_**Streamnetfy** is a website to search for tv shows information._
+_**Streamnetfy** is a website that can help you to find a new tv show for you to watch and where to watch it._
+_Get show rating, gender, images, network, show summary and more._
+_Dive into millions of shows info and find your next favorite show._
+_All in one place with a very user friendly design._
 
 <br>
 
 ### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views.
+> Wireframes section desktop, tablet and mobile views.
 
 ![Dummy Link](https://res.cloudinary.com/abetavarez/image/upload/v1588016434/Screen_Shot_2020-04-27_at_3.17.46_PM_aizegs.png)
 
@@ -56,22 +61,22 @@ _**Streamnetfy** is a website to search for tv shows information._
 
 > The Minimum Viable Product
 
-_**Streamnetfy** MVP user shold be able to see random tv shows dispay in the main page and user should have the ability to search for tv shows and see all information about the show._
+_**Streamnetfy** MVP user should be able to see random tv shows display in the main page and also user should have the ability to search for tv shows and see all information about the show that is available._
 
 <br>
 
 #### Goals
 
-- _Find a good APi._
-- _Create a website to retrive data from API and display data to the user using React._
-- _Add different funtionalities to the site, search etc._
-- _Apply CSS or other CSS libraries to styled the site and media queries._
+- _Find a reliable APi._
+- _Create a website to retrive data from API and display data to the user using React and other libraries._
+- _Allow the user to search for shows and see all the info available to them._
+- _Apply CSS or other CSS libraries to styled the site and media queries for different devices._
 
 <br>
 
 #### Libraries
 
-> Use this section to list all supporting libraries and their role in the project.
+> Supporting libraries and their role in the project.
 
 |   Library    | Description                                       |
 | :----------: | :------------------------------------------------ |
@@ -83,7 +88,7 @@ _**Streamnetfy** MVP user shold be able to see random tv shows dispay in the mai
 
 #### Data
 
-> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
+> API(s), and sample URL queries.
 
 |   API   | Quality Docs? | Website              | Sample Query                                 |
 | :-----: | :-----------: | :------------------- | :------------------------------------------- |
@@ -99,7 +104,7 @@ _**Streamnetfy** MVP user shold be able to see random tv shows dispay in the mai
 
 #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app.
+> React components and the data architecture.
 
 ```
 src
@@ -122,7 +127,7 @@ src
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
+> Further depth regarding your components.
 
 | Component  |    Type    | state | props | Description                                                       |
 | :--------: | :--------: | :---: | :---: | :---------------------------------------------------------------- |
@@ -138,9 +143,7 @@ src
 
 #### Component Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
->
-> Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
+> Estimate the time necessary to build out each of the components as described above.
 
 | Task       | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------- | :------: | :------------: | :-----------: | :---------: |
@@ -151,13 +154,13 @@ src
 | TV Show    |    H     |     8 hrs      |     0 hrs     |     TBD     |
 | About      |    L     |     3 hrs      |     0 hrs     |     TBD     |
 | Footer     |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| TOTAL      |          |     31 hrs     |     3 hrs     |     TBD     |
+| TOTAL      |          |     31 hrs     |     0 hrs     |     TBD     |
 
 <br>
 
 #### Helper Functions
 
-> Use this section to document all helper functions– generic functions that can be reused in other applications.
+> Document all helper functions– generic functions that can be reused in other applications.
 
 |  Function  | Description                                |
 | :--------: | :----------------------------------------- |
@@ -167,7 +170,7 @@ src
 
 ### Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+> Ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
 
 - _Add user account and auth capabilities._
 - _Utilize the Giphy API to welcome new users with funny gifs._
