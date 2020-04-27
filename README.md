@@ -1,68 +1,189 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# STREAMNETFY README <!-- omit in toc -->
 
-## Available Scripts
+- [Project Planning](#Project-Planning)
+  - [Overview](#Overview)
+  - [Wireframes](#Wireframes)
+  - [MVP](#MVP)
+    - [Goals](#Goals)
+    - [Libraries](#Libraries)
+    - [Data](#Data)
+    - [Component Hierarchy](#Component-Hierarchy)
+    - [Component Breakdown](#Component-Breakdown)
+    - [Component Estimates](#Component-Estimates)
+    - [Helper Functions](#Helper-Functions)
+  - [Post-MVP](#Post-MVP)
+- [Project Delivery](#Project-Delivery)
+  - [Code Showcase](#Code-Showcase)
+  - [Code Issues & Resolutions](#Code-Issues--Resolutions)
 
-In the project directory, you can run:
+## Project Planning
 
-### `yarn start`
+> The Project Planning section should be completed for your project pitch with instructors.
+>
+> To ensure correct Markdown, I recommend cloning this wiki and copy/pasting the raw template code.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Overview
 
-### `yarn test`
+_**STREAMNETFY** is a website to search for tv shows information._
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `yarn build`
+### Wireframes
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> Use the Wireframes section to display desktop, tablet and mobile views.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![Dummy Link](url)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Desktop Landing
 
-### `yarn eject`
+![Dummy Link](url)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Desktop Body
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Dummy Link](url)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Desktop Resource Index
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Dummy Link](url)
 
-## Learn More
+- Desktop Resource Show
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Dummy Link](url)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Tablet Resource Index
 
-### Code Splitting
+![Dummy Link](url)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- Mobile Resource Index
 
-### Analyzing the Bundle Size
+<br>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### MVP
 
-### Making a Progressive Web App
+> The Minimum Viable Product should be a well-planned and easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
 
-### Advanced Configuration
+<br>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+#### Goals
 
-### Deployment
+- _Find a good APi._
+- _Create a website to retrive data from api and display data to the user using React._
+- _Add different funtionalities to the site, search etc._
+- _Apply CSS or other CSS libraries._
+- _etc._
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+<br>
 
-### `yarn build` fails to minify
+#### Libraries
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+> Use this section to list all supporting libraries and their role in the project.
+
+|   Library    | Description                                       |
+| :----------: | :------------------------------------------------ |
+| React Router | _Allow single page site to have multiples paths._ |
+|    Axios     | _Helps to create Api calls easier._               |
+|    React     | _Lorem ipsum dolor sit amet, consectetur._        |
+
+<br>
+
+#### Data
+
+> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
+
+|   API   | Quality Docs? | Website              | Sample Query                                 |
+| :-----: | :-----------: | :------------------- | :------------------------------------------- |
+| TV Maze |      yes      | _www.tvmaze.com/api_ | _http://api.tvmaze.com/search/shows?q=girls_ |
+
+<br>
+
+![Postman](https://res.cloudinary.com/abetavarez/image/upload/v1588009559/Screen_Shot_2020-04-27_at_1.16.51_PM_su5h0p.png)
+
+- Mobile Resource Index
+
+<br>
+
+#### Component Hierarchy
+
+> Use this section to define your React components and the data architecture of your app.
+
+```
+src
+|__ assets/
+      |__ data-tests
+      |__ fonts
+      |__ graphics
+      |__ images
+      |__ mockups
+|__ components/
+      |__ Header.jsx
+      |__ Hero.jsx
+      |__ Ipsum.jsx
+      |__ Lorem.jsx
+      |__ CTA.jsx
+      |__ Footer.jsx
+```
+
+<br>
+
+#### Component Breakdown
+
+> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
+
+|  Component   |    Type    | state | props | Description                                                      |
+| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
+|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
+|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
+| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
+|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+
+<br>
+
+#### Component Estimates
+
+> Use this section to estimate the time necessary to build out each of the components you've described above.
+>
+> Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
+
+| Task                | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------- | :------: | :------------: | :-----------: | :---------: |
+| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+
+<br>
+
+#### Helper Functions
+
+> Use this section to document all helper functions– generic functions that can be reused in other applications.
+
+|  Function  | Description                                |
+| :--------: | :----------------------------------------- |
+| Capitalize | _Lorem ipsum dolor sit amet, consectetur._ |
+
+<br>
+
+### Post-MVP
+
+> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+
+- _Add user account and auth capabilities._
+- _Utilize the Giphy API to welcome new users with funny gifs._
+
+<br>
+
+---
+
+## Project Delivery
+
+### Code Showcase
+
+> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+
+### Code Issues & Resolutions
+
+> Use this section to list of all major issues encountered and their resolution, if you'd like.
