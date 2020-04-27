@@ -116,10 +116,10 @@ src
       |__ mockups
 |__ components/
       |__ Header.jsx
-      |__ Hero.jsx
-      |__ Ipsum.jsx
-      |__ Lorem.jsx
-      |__ CTA.jsx
+      |__ Nav.jsx
+      |__ Search.jsx
+      |__ Show.jsx
+      |__ About.jsx
       |__ Footer.jsx
 ```
 
