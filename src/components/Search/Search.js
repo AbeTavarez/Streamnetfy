@@ -8,12 +8,14 @@ class Search extends Component {
     };
   }
 
+  //* Sets changes on search bar to state
   handleChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value,
+      text: e.target.value,
+      // [e.target.name]: e.target.value
     });
   };
-
+  //* Calls searchShows from App Component
   onSubmit = (e) => {
     e.preventDefault();
     this.props.searchShows(this.state.text);
@@ -23,15 +25,16 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.onSubmit}>
+        <form onSubmit={this.onSubmit} className="form">
           <input
             name="text"
             type="text"
-            placeholder="Search"
+            className="test"
+            placeholder="Search TV Shows"
             value={this.state.text}
             onChange={this.handleChange}
           />
-          <input type="submit" />
+          <input type="submit" className="btn btn-dark btn-block" />
         </form>
       </div>
     );
