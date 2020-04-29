@@ -134,13 +134,13 @@ img {
   margin: 0.7rem 0;
   color: white;
 }
-.cardShow {
+/* .cardShow {
   color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 20px;
-}
+} */
 
 /* List */
 .list {

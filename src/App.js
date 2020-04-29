@@ -6,6 +6,7 @@ import { NavBar } from "./components/Nav/NavBar";
 import { Header } from "./components/Header/Header";
 import { ShowResults } from "./components/ShowResults/ShowResults";
 import Footer from "./components/Footer/Footer";
+import ShowPages from "./components/ShowPages/ShowPages";
 
 const baseURL = " http://api.tvmaze.com/search/shows?q=";
 
@@ -21,16 +22,15 @@ class App extends Component {
     super();
     this.state = {
       tvshows: [],
-      byPage: [],
+      showsbyPage: [],
     };
   }
-  //* Fetch full list of shows
+  //* Fetch full list of shows by page
   //! images are not working from calling this endpoint
   async componentDidMount() {
     const res = await axios.get("http://api.tvmaze.com/shows");
-
     this.setState({
-      byPage: res.data,
+      showsbyPage: res.data,
     });
     console.log(res.data);
   }
@@ -56,6 +56,7 @@ class App extends Component {
         <NavBar />
         <Header />
         <Search tvShows={this.state.tvshows} searchShows={this.searchShows} />
+        <ShowPages showpages={this.state.showsbyPage} />
         <ShowResults tvshows={this.state.tvshows} />
         <Footer />
       </div>

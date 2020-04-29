@@ -1,0 +1,21 @@
+.cardShow {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+
+  text-align: center;
+  padding: 80px;
+}
+.lineDetails {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  height: 50px;
+  margin: 5px;
+  border: solid gray 1px;
+}
