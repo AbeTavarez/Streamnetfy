@@ -7,6 +7,7 @@ import { Header } from "./components/Header/Header";
 import { ShowResults } from "./components/ShowResults/ShowResults";
 import Footer from "./components/Footer/Footer";
 import ShowPages from "./components/ShowPages/ShowPages";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const baseURL = " http://api.tvmaze.com/search/shows?q=";
 
@@ -53,9 +54,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBar />
         <Header />
+
+        <NavBar />
+
         <Search tvShows={this.state.tvshows} searchShows={this.searchShows} />
+
         <ShowPages showpages={this.state.showsbyPage} />
         <ShowResults tvshows={this.state.tvshows} />
         <Footer />
