@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Search.css";
 
 class Search extends Component {
   constructor() {
@@ -29,10 +30,11 @@ class Search extends Component {
           <input
             name="text"
             type="text"
-            className="test"
+            className="test search-layout"
             placeholder="Search TV Shows"
             value={this.state.text}
             onChange={this.handleChange}
+            required
           />
           <input type="submit" className="btn btn-dark btn-block" />
         </form>

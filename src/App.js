@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "materialize-css/dist/css/materialize.min.css";
+import M from "materialize-css/dist/js/materialize.min.js";
 import axios from "axios";
 import "./App.css";
 import Search from "./components/Search/Search";
@@ -59,8 +61,9 @@ class App extends Component {
         <Router>
           <Switch>
             <Route>
-              <Header />
               <NavBar />
+              <Header />
+
               <Search
                 tvShows={this.state.tvshows}
                 searchShows={this.searchShows}
