@@ -7,16 +7,14 @@ export const NavBar = () => {
     <nav>
       <div className="nav-wrapper">
         <div className="brand-logo site-name">
-          <a className="logo-int">
+          <p className="logo-int">
             <Link to="/">Streamnetfy</Link>
-          </a>
+          </p>
         </div>
         <div>
           <ul id="nav-mobile" className="nav-btn">
             <li>
-              <Link exact to="/">
-                Home
-              </Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/about/">About</Link>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import WatchNowBtn from "../WatchNowBtn/WatchNowBtn";
 
 const ShowPages = ({ showsbypages }) => {
-  console.log("--->", showsbypages);
+  // console.log("--->", showsbypages);
   return (
     <div>
       {showsbypages.map((show, idx) => (
@@ -19,7 +19,7 @@ const ShowPages = ({ showsbypages }) => {
                   <p>{show.language}</p>
                   <p>{show.runtime}m</p>
                   {show.genres.map((genre) => (
-                    <p>{genre}</p>
+                    <p key={idx + genre}>{genre}</p>
                   ))}
                   <p>{show.premiered}</p>
                   <WatchNowBtn />
@@ -34,7 +34,3 @@ const ShowPages = ({ showsbypages }) => {
 };
 
 export default ShowPages;
-
-{
-  /* <WatchNowBtn network={this.state.shows} /> */
-}

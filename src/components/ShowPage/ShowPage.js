@@ -38,20 +38,3 @@ class ShowPage extends Component {
 }
 
 export default withRouter(ShowPage);
-
-/* <div className="all-center">
-          {/* <img src={this.props.showsbypages.image.original} /> */
-
-// </div>
-//       <div className="cardShow">
-//         <div className="lineDetails">
-//           <h1>{this.props.showsbypages.name}</h1>
-//           <p>{this.props.showsbypages.language}</p>
-//           <p>{this.props.showsbypages.runtime}m</p>
-//           {this.props.showsbypages.genres.map((genre) => (
-//             <p>{genre}</p>
-//           ))}
-//           <p>{this.props.showsbypages.premiered}</p>
-//         </div>
-//         <WatchNowBtn network={this.state.shows} />
-//       </div>

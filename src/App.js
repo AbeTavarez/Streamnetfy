@@ -14,15 +14,15 @@ import ShowPage from "./components/ShowPage/ShowPage";
 import About from "./components/About/About";
 import Show from "./components/Show/Show";
 
-const baseURL = " http://api.tvmaze.com/search/shows?q=";
-
+const SEARCH_URL = " http://api.tvmaze.com/search/shows?q=";
+const BASE_URL = "http://api.tvmaze.com/shows";
 const date = new Date();
 const d = date.getDate();
 const m = date.getMonth() + 1;
 const y = date.getFullYear();
 const ISO = `${y}-0${m}-${d}`;
-console.log(ISO);
 const showByDate = `http://api.tvmaze.com/shows/1/episodesbydate?date=${ISO}`;
+
 class App extends Component {
   constructor() {
     super();
@@ -33,17 +33,15 @@ class App extends Component {
     };
   }
   //* Fetch full list of shows by page
-  //! images are not working from calling this endpoint
   async componentDidMount() {
     this.setState({
       loading: true,
     });
-
-    const res = await axios.get("http://api.tvmaze.com/shows");
+    //* MAIN CALL
+    const res = await axios.get(`${BASE_URL}`);
     this.setState({
       showsbyPage: res.data,
     });
-    // console.log(res.data);
     this.setState({
       loading: false,
     });
@@ -52,15 +50,10 @@ class App extends Component {
   //* func is pass down in props to Search Component
   //* but sets this Component state
   searchShows = async (showName) => {
-    const res = await axios.get(
-      `http://api.tvmaze.com/search/shows?q=${showName}`
-    );
-    // console.log(showName);
-    // console.log(res.data);
+    const res = await axios.get(`${SEARCH_URL}${showName}`);
     this.setState({
       tvshows: res.data,
     });
-    // console.log(this.state.tvshows);
     this.setState({
       showsbyPage: [],
     });

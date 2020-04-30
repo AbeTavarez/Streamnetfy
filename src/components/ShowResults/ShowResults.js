@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import WatchNowBtn from "../WatchNowBtn/WatchNowBtn";
 
 const ShowResults = ({ tvshows }) => {
-  console.log("sr-->", tvshows);
+  // console.log("sr-->", tvshows);
   return (
     <div>
       {tvshows.map((show, idx) => (
@@ -39,15 +39,3 @@ const userStyle = {
   gridTemplateColumns: "repeat(1,1fr)",
   gridGap: "1rem",
 };
-
-// export const ShowResults = ({ tvshows }) => {
-//   return (
-//     <div style={{ userStyle }}>
-//       {tvshows.map((show) => (
-//         <div className="container">
-//           <Show resultShows={show} />
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };

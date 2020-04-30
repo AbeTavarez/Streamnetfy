@@ -13,10 +13,9 @@ class Show extends Component {
       show: currentShow,
     };
   }
-  // ({ resultShows: show })
 
   render() {
-    console.log("show data->", this.state.show);
+    // console.log("show data->", this.state.show);
     return (
       <div className="card grid-2">
         <h1>Show component</h1>
@@ -37,22 +36,3 @@ class Show extends Component {
 }
 
 export default withRouter(Show);
-
-// const Show = ({ resultShows: show }) => {
-//   console.log("show data->", show);
-//   return (
-//     <div className="card grid-2">
-//       <div>
-//         <h3>{show.show.name}</h3>
-//         {show.show.genres.map((genre) => (
-//           <p>{genre}</p>
-//         ))}
-//         <p>{show.show.summary}</p>
-//         <h6>{show.show.premiered}</h6>
-//       </div>
-//       <div className="all-center">
-//         <img src={show.show.image.original} />
-//       </div>
-//     </div>
-//   );
-// };
