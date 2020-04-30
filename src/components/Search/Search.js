@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "./Search.css";
 
 class Search extends Component {
@@ -8,6 +9,10 @@ class Search extends Component {
       text: "",
     };
   }
+
+  static propTypes = {
+    searchShows: PropTypes.func.isRequired,
+  };
 
   //* Sets changes on search bar to state
   handleChange = (e) => {
@@ -21,6 +26,9 @@ class Search extends Component {
     e.preventDefault();
     this.props.searchShows(this.state.text);
     console.log(this.state.text);
+    this.setState({
+      text: "",
+    });
   };
 
   render() {

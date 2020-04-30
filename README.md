@@ -83,7 +83,7 @@ _**Streamnetfy** MVP user should be able to see random tv shows display in the m
 | React Router | _Allow single page site to have multiples paths._ |
 |    Axios     | _Helps to create Api calls easier._               |
 |     Jest     | _App testing TDD._                                |
-| Materialize  | _UI._                                             |
+| Materialize  | _UI and app layout._                              |
 
 <br>
 
@@ -180,11 +180,11 @@ src
 | Header     |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
 | Navegation |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
 | Search     |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
-| TV Shows   |    H     |     6 hrs      |     4 hrs     |    4 hrs    |
-| TV Show    |    H     |     8 hrs      |     0 hrs     |     TBD     |
+| TV Shows   |    H     |     6 hrs      |     6 hrs     |    6 hrs    |
+| TV Show    |    H     |     8 hrs      |     4 hrs     |     TBD     |
 | About      |    L     |     3 hrs      |     0 hrs     |     TBD     |
 | Footer     |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| TOTAL      |          |     31 hrs     |     0 hrs     |     TBD     |
+| TOTAL      |          |     31 hrs     |    21 hrs     |     TBD     |
 
 <br>
 

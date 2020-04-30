@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import WatchNowBtn from "../WatchNowBtn/WatchNowBtn";
 import "./ShowPage.css";
 
 class ShowPage extends Component {

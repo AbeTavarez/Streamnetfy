@@ -1,15 +1,14 @@
 import React from "react";
-import ShowPage from "../ShowPage/ShowPage";
-import { Link, Router, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import WatchNowBtn from "../WatchNowBtn/WatchNowBtn";
 
 const ShowPages = ({ showsbypages }) => {
-  // console.log("--->", showsbypages);
+  console.log("--->", showsbypages);
   return (
     <div>
       {showsbypages.map((show, idx) => (
         <div key={idx}>
-          <Link to={"/show/" + show.name}>
+          <Link to={"/show/" + show.name} key={idx}>
             <div className="card grid-2">
               <div className="all-center">
                 <img src={show.image.original} />

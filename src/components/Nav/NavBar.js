@@ -6,21 +6,20 @@ export const NavBar = () => {
   return (
     <nav>
       <div className="nav-wrapper">
-        <Link to="/" className="brand-logo site-name">
-          Streamnetfy
-        </Link>
+        <div className="brand-logo site-name">
+          <a>
+            <Link>Streamnetfy</Link>
+          </a>
+        </div>
         <div>
-          <Router>
-            <ul id="nav-mobile" className="nav-btn">
-              <Link to="/">
-                <li>Home</li>
-              </Link>
-              <Link to="../About/About">
-                <li>About</li>
-              </Link>
-              <li></li>
-            </ul>
-          </Router>
+          <ul id="nav-mobile" className="nav-btn">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about/">About</Link>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
