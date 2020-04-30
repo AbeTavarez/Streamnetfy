@@ -10,12 +10,12 @@ class ShowPage extends Component {
     const currentShow = this.props.showsbypages.find(
       (show) => show.name === this.props.match.params.name
     );
-    console.log("--->", this.props.showsbypages);
+    // console.log("--->", this.props.showsbypages);
     this.state = {
       shows: currentShow,
     };
 
-    console.log("--->", this.state.shows);
+    // console.log("--->", this.state.shows);
   }
 
   render() {

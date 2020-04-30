@@ -83,6 +83,7 @@ _**Streamnetfy** MVP user should be able to see random tv shows display in the m
 | React Router | _Allow single page site to have multiples paths._ |
 |    Axios     | _Helps to create Api calls easier._               |
 |     Jest     | _App testing TDD._                                |
+| Materialize  | _UI._                                             |
 
 <br>
 
@@ -109,18 +110,44 @@ _**Streamnetfy** MVP user should be able to see random tv shows display in the m
 ```
 src
 |__ assets/
-      |__ data-tests
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
 |__ components/
-      |__ Header.jsx
-      |__ Nav.jsx
-      |__ Search.jsx
-      |__ Show.jsx
-      |__ About.jsx
-      |__ Footer.jsx
+      |__ Header/
+        |__ Header.js
+        |__ Header.css
+      |__ Nav/
+        |__ Nav.js
+        |__ Nav.test.js
+        |__ Nav.css
+      |__ Search/
+        |__ Search.js
+        |__ Search.test.js
+        |__ Search.css
+      |__ ShowPages/
+        |__ ShowPages.js
+        |__ ShowPages.test.js
+        |__ ShowPages.css
+      |__ Show/
+        |__ Show.js
+        |__ Show.test.js
+        |__ Show.css
+      |__ About/
+        |__ About.js
+        |__ About.css
+      |__ Footer/
+        |__ Footer.js
+        |__ Footer.css
+      |__ WatchNowBtn/
+        |__ WatchNowBtn.js
+        |__ WatchNowBtn.test.js
+        |__ WatchNowBtn.css
+      |__ Loading/
+        |__ Loading.js
+        |__ Loading.test.js
+        |__ Loading.css
+      |__ Alert/
+        |__ Alert.js
+        |__ Alert.test.js
+        |__ Alert.css
 ```
 
 <br>
@@ -129,15 +156,18 @@ src
 
 > Further depth regarding your components.
 
-| Component  |    Type    | state | props | Description                                                       |
-| :--------: | :--------: | :---: | :---: | :---------------------------------------------------------------- |
-|   Header   | functional |   n   |   n   | _The header will contain the navigation and logo._                |
-| Navigation | functional |   n   |   n   | _The navigation will provide a link to each of the pages._        |
-|   Search   | functional |   n   |   n   | _The search will allow user to search._                           |
-|  TV Shows  |   class    |   y   |   n   | _The tv shows will render the tv shows using tv show in flexbox._ |
-|  TV Show   | functional |   n   |   y   | _The tv show will render the show info via props._                |
-|   About    | functional |   n   |   n   | _The about will contain info about the developer etc._            |
-|   Footer   | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._  |
+|  Component  |    Type    | state | props | Description                                                       |
+| :---------: | :--------: | :---: | :---: | :---------------------------------------------------------------- |
+|   Header    | functional |   n   |   n   | _The header will contain the navigation and logo._                |
+| Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._        |
+|   Search    | functional |   n   |   n   | _The search will allow user to search._                           |
+|  ShowPage   |   class    |   y   |   n   | _The tv shows will render the tv shows using tv show in flexbox._ |
+|  Showpages  |  function  |   n   |   y   | _The tv show will render the show info via props._                |
+|    About    | functional |   n   |   n   | _The about will contain info about the developer etc._            |
+|   Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._  |
+| WatchNowBtn | functional |   n   |   y   | _TThe watchnow button will show/take user to tv show network._    |
+|   Loading   | functional |   n   |   y   | _The loading will show when data is being fetch/loading._         |
+|    Alert    | functional |   n   |   y   | _The search will allow user to search._                           |
 
 <br>
 
@@ -147,10 +177,10 @@ src
 
 | Task       | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------- | :------: | :------------: | :-----------: | :---------: |
-| Header     |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Navegation |    H     |     4 hrs      |     0 hrs     |     TBD     |
-| Search     |    H     |     4 hrs      |     0 hrs     |     TBD     |
-| TV Shows   |    H     |     6 hrs      |     0 hrs     |     TBD     |
+| Header     |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+| Navegation |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
+| Search     |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
+| TV Shows   |    H     |     6 hrs      |     4 hrs     |    4 hrs    |
 | TV Show    |    H     |     8 hrs      |     0 hrs     |     TBD     |
 | About      |    L     |     3 hrs      |     0 hrs     |     TBD     |
 | Footer     |    H     |     3 hrs      |     0 hrs     |     TBD     |
@@ -162,9 +192,9 @@ src
 
 > Document all helper functions– generic functions that can be reused in other applications.
 
-|  Function  | Description                                |
-| :--------: | :----------------------------------------- |
-| Capitalize | _Lorem ipsum dolor sit amet, consectetur._ |
+|  Function   | Description                                                                                |
+| :---------: | :----------------------------------------------------------------------------------------- |
+| WatchNowBtn | _Button ta take user to see information about the tv network where the show is available._ |
 
 <br>
 
@@ -185,6 +215,23 @@ src
 
 > Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
 
+\_const WatchNowBtn = ({ network }) => {
+return (
+
+<div className="watchnow">
+<h3>Watch Now</h3>
+<h6>{network}</h6>
+<div>
+{network.map((net) => {
+return <p>{net.network.name}</p>;
+})}
+</div>
+</div>
+);
+};
+
+export default WatchNowBtn;\_
+
 ### Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution, if you'd like.
+> Found HTML tags inside the Summary/ Tv Show description property.
