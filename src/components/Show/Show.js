@@ -20,4 +20,4 @@ const Show = ({ resultShows: show }) => {
   );
 };
 
-export default Show;
+export default withRouter(Show);

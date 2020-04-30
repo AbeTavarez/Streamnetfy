@@ -1,6 +1,6 @@
 import React from "react";
 import "./Nav.css";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
@@ -9,11 +9,16 @@ export const NavBar = () => {
         <h1>Streamnetfy</h1>
       </div>
       <div>
-        <ul>
-          <a to="/">Home</a>
-
-          <a>About</a>
-        </ul>
+        <Router>
+          <ul>
+            <Link to="/">
+              <li>Home</li>
+            </Link>
+            <Link to="../About/About">
+              <li>About</li>
+            </Link>
+          </ul>
+        </Router>
       </div>
     </nav>
   );

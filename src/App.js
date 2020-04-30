@@ -8,6 +8,8 @@ import { ShowResults } from "./components/ShowResults/ShowResults";
 import Footer from "./components/Footer/Footer";
 import ShowPages from "./components/ShowPages/ShowPages";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Alert from "./components/Alert/Alert";
+import ShowPage from "./components/ShowPage/ShowPage";
 
 const baseURL = " http://api.tvmaze.com/search/shows?q=";
 
@@ -33,7 +35,7 @@ class App extends Component {
     this.setState({
       showsbyPage: res.data,
     });
-    console.log(res.data);
+    // console.log(res.data);
   }
   //* Search for show name
   //* func is pass down in props to Search Component
@@ -54,15 +56,31 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-
-        <NavBar />
-
-        <Search tvShows={this.state.tvshows} searchShows={this.searchShows} />
-
-        <ShowPages showpages={this.state.showsbyPage} />
-        <ShowResults tvshows={this.state.tvshows} />
-        <Footer />
+        <Router>
+          <Switch>
+            <Route>
+              <Header />
+              <NavBar />
+              <Search
+                tvShows={this.state.tvshows}
+                searchShows={this.searchShows}
+              />
+              <div className="container">
+                <Route exact path="/">
+                  <ShowPages showsbypages={this.state.showsbyPage} />
+                </Route>
+                <Route exact path="/show/:name">
+                  <ShowPage showsbypages={this.state.showsbyPage} />
+                </Route>
+                {/* <Route>
+                  <ShowResults tvshows={this.state.tvshows} />
+                </Route> */}
+              </div>
+              <Footer />
+            </Route>
+            <Route></Route>
+          </Switch>
+        </Router>
       </div>
     );
   }

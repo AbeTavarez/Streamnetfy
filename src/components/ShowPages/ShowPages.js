@@ -1,12 +1,33 @@
-import React, { Fragment } from "react";
+import React from "react";
 import ShowPage from "../ShowPage/ShowPage";
+import { Link, Router, Route } from "react-router-dom";
+import WatchNowBtn from "../WatchNowBtn/WatchNowBtn";
 
-const ShowPages = ({ showpages }) => {
+const ShowPages = ({ showsbypages }) => {
+  // console.log("--->", showsbypages);
   return (
     <div>
-      {showpages.map((show, idx) => (
+      {showsbypages.map((show, idx) => (
         <div key={idx}>
-          <ShowPage resultShows={show} />
+          <Link to={"/show/" + show.name}>
+            <div className="card grid-2">
+              <div className="all-center">
+                <img src={show.image.original} />
+              </div>
+              <div>
+                <div>
+                  <h1>{show.name}</h1>
+                  <p>{show.language}</p>
+                  <p>{show.runtime}m</p>
+                  {show.genres.map((genre) => (
+                    <p>{genre}</p>
+                  ))}
+                  <p>{show.premiered}</p>
+                  <WatchNowBtn />
+                </div>
+              </div>
+            </div>
+          </Link>
         </div>
       ))}
     </div>
@@ -14,3 +35,7 @@ const ShowPages = ({ showpages }) => {
 };
 
 export default ShowPages;
+
+{
+  /* <WatchNowBtn network={this.state.shows} /> */
+}
