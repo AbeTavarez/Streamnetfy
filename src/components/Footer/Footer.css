@@ -6,4 +6,14 @@
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
   color: white;
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
 }

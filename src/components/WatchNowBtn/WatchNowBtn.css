@@ -10,7 +10,13 @@
   font-size: 0.8rem;
   border-radius: 5px;
   cursor: pointer;
-  margin-right: 0.5rem;
+  /* margin-right: 0.5rem; */
+  margin-top: 15px;
   transition: opacity 0.2s ease-in;
   outline: none;
+}
+.watchnow h3 {
+  font-size: 22px;
+  padding: 10px;
+  margin: 10px;
 }
