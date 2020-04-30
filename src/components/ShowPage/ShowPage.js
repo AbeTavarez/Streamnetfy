@@ -25,7 +25,7 @@ class ShowPage extends Component {
           <span>{this.state.shows.language}</span>
           <span>{this.state.shows.runtime}</span>
           {this.state.shows.genres.map((genre) => (
-            <span>{genre}</span>
+            <span key={genre}>{genre}</span>
           ))}
           <p>{this.state.shows.summary}</p>
         </div>

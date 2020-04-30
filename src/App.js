@@ -14,8 +14,8 @@ import ShowPage from "./components/ShowPage/ShowPage";
 import About from "./components/About/About";
 import Show from "./components/Show/Show";
 
-const SEARCH_URL = " http://api.tvmaze.com/search/shows?q=";
-const BASE_URL = "http://api.tvmaze.com/shows";
+const SEARCH_URL = " https://api.tvmaze.com/search/shows?q=";
+const BASE_URL = "https://api.tvmaze.com/shows";
 const date = new Date();
 const d = date.getDate();
 const m = date.getMonth() + 1;
