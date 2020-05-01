@@ -4,7 +4,7 @@ import "./Header.css";
 
 export const Header = () => {
   return (
-    <div className="header">
+    <div className="header" name="eyes">
       <img src={eyes} className="header" />
     </div>
   );

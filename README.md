@@ -116,7 +116,6 @@ src
         |__ Header.css
       |__ Nav/
         |__ Nav.js
-        |__ Nav.test.js
         |__ Nav.css
       |__ Search/
         |__ Search.js
@@ -124,7 +123,6 @@ src
         |__ Search.css
       |__ ShowPages/
         |__ ShowPages.js
-        |__ ShowPages.test.js
         |__ ShowPages.css
       |__ Show/
         |__ Show.js
@@ -138,15 +136,12 @@ src
         |__ Footer.css
       |__ WatchNowBtn/
         |__ WatchNowBtn.js
-        |__ WatchNowBtn.test.js
         |__ WatchNowBtn.css
       |__ Loading/
         |__ Loading.js
-        |__ Loading.test.js
         |__ Loading.css
       |__ Alert/
         |__ Alert.js
-        |__ Alert.test.js
         |__ Alert.css
 ```
 
@@ -181,10 +176,10 @@ src
 | Navegation |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
 | Search     |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
 | TV Shows   |    H     |     6 hrs      |     6 hrs     |    6 hrs    |
-| TV Show    |    H     |     8 hrs      |     4 hrs     |     TBD     |
-| About      |    L     |     3 hrs      |     0 hrs     |     TBD     |
-| Footer     |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| TOTAL      |          |     31 hrs     |    21 hrs     |     TBD     |
+| TV Show    |    H     |     8 hrs      |     8 hrs     |    8 hrs    |
+| About      |    L     |     3 hrs      |     3 hrs     |    3 hrs    |
+| Footer     |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+| TOTAL      |          |     31 hrs     |    31 hrs     |   31 hrs    |
 
 <br>
 
@@ -202,8 +197,8 @@ src
 
 > Ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
 
-- _Add user account and auth capabilities._
-- _Utilize the Giphy API to welcome new users with funny gifs._
+- _Allow user to create an account._
+- _Create a favorite tab._
 
 <br>
 

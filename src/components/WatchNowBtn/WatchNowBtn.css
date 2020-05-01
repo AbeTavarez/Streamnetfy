@@ -10,7 +10,7 @@
   font-size: 0.8rem;
   border-radius: 5px;
   cursor: pointer;
-  /* margin-right: 0.5rem; */
+  margin-right: 0.5rem;
   margin-top: 15px;
   transition: opacity 0.2s ease-in;
   outline: none;
@@ -19,4 +19,148 @@
   font-size: 22px;
   padding: 10px;
   margin: 10px;
+}
+.watchnow:hover {
+  box-shadow: slategray;
+}
+
+.basicstyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  background-color: "#4267B2";
+  /* color: white; */
+  font-size: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-top: 15px;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.NetflixStyle {
+  background-color: "#FF0000";
+  color: "white";
+  border-radius: "2px";
+  padding: "5px 25px";
+  border: "#FF0000";
+}
+
+button {
+  border-radius: 2px;
+  padding: 5px 25px;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+button:hover {
+  opacity: 0.7;
+}
+.primary {
+  background-color: #0069d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 5px;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-top: 15px;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+.primary:active {
+  background-color: white;
+  color: #00a4ef;
+}
+.primary:hover {
+  background-color: #00a4ef;
+}
+.netflix {
+  background-color: #ff4858;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-top: 15px;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+.netflix:hover {
+  background-color: #e50914;
+}
+.amazon {
+  background-color: #ff9900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-top: 15px;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+.amazon:hover {
+  background-color: #ffb900;
+}
+.hulu {
+  background-color: #1db954;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-top: 15px;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+.hulu:hover {
+  background-color: #25d366;
+}
+.hbo {
+  background-color: #191414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-top: 15px;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+.hbo:hover {
+  background-color: #737373;
 }

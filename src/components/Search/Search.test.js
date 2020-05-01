@@ -1,11 +1,19 @@
 import React from "react";
-import { mount } from "enzyme";
+import { shallow } from "enzyme";
 import Search from "./Search";
 
 describe("Search Component", () => {
   let comp;
   beforeEach(() => {
-    comp = mount(<Search />);
+    comp = shallow(<Search />);
+  });
+
+  it("renders a div", () => {
+    expect(comp.type()).toBe("div");
+  });
+
+  it("intial state to be a empty string", () => {
+    expect(comp.state("text")).toBe("");
   });
 
   it("Makes sure when the user type in Search Bar field, state updates to match whats typed in the field.", () => {
@@ -13,8 +21,8 @@ describe("Search Component", () => {
     expect(comp.state("text")).toBe("searchtest");
   });
 
-  // it("Makes sure when submit button.", () => {
-  //   comp.find(".Btn").simulate("click");
-  //   expect(comp.state("valid")).toBe(true);
-  // });
+  it("Makes sure when submit button.", () => {
+    comp.find(".form-test").simulate("click");
+    expect(comp.state("validEntry")).toBe(false);
+  });
 });

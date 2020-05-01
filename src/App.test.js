@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-// import { Mount } from "enzyme";
+import { Mount } from "enzyme";
 import App from "./App";
 
 test("renders learn react link", () => {
@@ -15,5 +15,7 @@ test("renders learn react link", () => {
 //     comp = Mount(<App />);
 //   });
 
-//   it();
+//   it("Show prop is first undefined ", () => {
+//     expect(comp.state("tvshows")).toEqual(Array);
+//   });
 // });

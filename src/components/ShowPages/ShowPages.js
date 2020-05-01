@@ -1,9 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import WatchNowBtn from "../WatchNowBtn/WatchNowBtn";
+import Loading from "../Loading/Loading";
 
-const ShowPages = ({ showsbypages }) => {
+const ShowPages = ({ showsbypages, isLoading }) => {
   // console.log("--->", showsbypages);
+
+  if (isLoading) return <Loading />;
   return (
     <div>
       {showsbypages.map((show, idx) => (
@@ -15,7 +19,7 @@ const ShowPages = ({ showsbypages }) => {
               </div>
               <div>
                 <div>
-                  <h1>{show.name}</h1>
+                  <h3>{show.name}</h3>
                   <p>{show.language}</p>
                   <p>{show.runtime}m</p>
                   {show.genres.map((genre) => (
@@ -31,6 +35,11 @@ const ShowPages = ({ showsbypages }) => {
       ))}
     </div>
   );
+};
+
+ShowPages.propTypes = {
+  showsbypages: PropTypes.array.isRequired,
+  isLoading: PropTypes.bool.isRequired,
 };
 
 export default ShowPages;

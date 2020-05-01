@@ -1,9 +1,13 @@
 import React, { Component } from "react";
+import propTypes from "prop-types";
 import { Link } from "react-router-dom";
 import WatchNowBtn from "../WatchNowBtn/WatchNowBtn";
+import Loading from "../Loading/Loading";
 
-const ShowResults = ({ tvshows }) => {
-  console.log("sr-->", tvshows);
+const ShowResults = ({ tvshows, isLoading }) => {
+  // console.log("sr-->", tvshows);
+
+  if (isLoading) return <Loading />;
   return (
     <div>
       {tvshows.map((show, idx) => (
@@ -34,6 +38,10 @@ const ShowResults = ({ tvshows }) => {
 };
 
 export default ShowResults;
+
+ShowResults.propTypes = {
+  tvshows: propTypes.array.isRequired,
+};
 
 const userStyle = {
   display: "grid",

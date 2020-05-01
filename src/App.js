@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ShowPage from "./components/ShowPage/ShowPage";
 import About from "./components/About/About";
 import Show from "./components/Show/Show";
+import Alert from "./components/Alert/Alert";
 
 const SEARCH_URL = " https://api.tvmaze.com/search/shows?q=";
 const BASE_URL = "https://api.tvmaze.com/shows";
@@ -31,6 +32,7 @@ class App extends Component {
       showsbyPage: [],
       isLoading: false,
       isSearching: false,
+      alert: null,
     };
   }
   //* Fetch full list of shows by page
@@ -51,21 +53,32 @@ class App extends Component {
   //* func is pass down in props to Search Component
   //* but sets this Component state
   searchShows = async (showName) => {
+    this.setState({
+      isLoading: true,
+      isSearching: true,
+    });
     const res = await axios.get(`${SEARCH_URL}${showName}`);
     this.setState({
       tvshows: res.data,
-      isSearching: true,
+      isLoading: false,
+      isSearching: false,
     });
-    // this.setState({
-    //   showsbyPage: res.data,
-    //   isSearching: true,
-    // });
   };
-
+  //* Clears out other object call
   clearShowbyPage = () => {
     this.setState({
       showsbyPage: [],
     });
+  };
+
+  //* Set Alert
+  //* Pass down to Search Component
+  setAlert = (msg, type) => {
+    this.setState({
+      alert: { msg, type },
+    });
+    //* Time out to remove the Alert from the UI
+    setTimeout(() => this.setState({ alert: null }), 3000);
   };
 
   //* Render
@@ -80,13 +93,20 @@ class App extends Component {
               <Search
                 tvShows={this.state.tvshows}
                 searchShows={this.searchShows}
+                setAlert={this.alert}
               />
 
               <div className="container">
                 <Switch>
                   <Route exact path="/">
-                    <ShowResults tvshows={this.state.tvshows} />
-                    <ShowPages showsbypages={this.state.showsbyPage} />
+                    <ShowResults
+                      tvshows={this.state.tvshows}
+                      isLoading={this.state.isLoading}
+                    />
+                    <ShowPages
+                      showsbypages={this.state.showsbyPage}
+                      isLoading={this.state.isLoading}
+                    />
                   </Route>
 
                   <Route exact path="/show/:name">

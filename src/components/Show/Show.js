@@ -15,9 +15,9 @@ class Show extends Component {
   }
 
   render() {
-    console.log("curr data->", this.props.currentShow);
-    console.log("props data->", this.props.tvshows);
-    console.log("sate data->", this.state.shows);
+    // console.log("curr data->", this.props.currentShow);
+    // console.log("props data->", this.props.tvshows);
+    // console.log("sate data->", this.state.shows);
     return (
       <div className="card grid-2">
         <div>

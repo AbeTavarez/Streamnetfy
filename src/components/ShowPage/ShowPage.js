@@ -21,7 +21,7 @@ class ShowPage extends Component {
     return (
       <div className="card grid-2">
         <div className="all-center">
-          <h1>{this.state.shows.name}</h1>
+          <h3>{this.state.shows.name}</h3>
           <span>{this.state.shows.language}</span>
           <span>{this.state.shows.runtime}</span>
           {this.state.shows.genres.map((genre) => (

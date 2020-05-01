@@ -7,12 +7,9 @@ class Search extends Component {
     super();
     this.state = {
       text: "",
+      validEntry: false,
     };
   }
-
-  static propTypes = {
-    searchShows: PropTypes.func.isRequired,
-  };
 
   //* Sets changes on search bar to state
   handleChange = (e) => {
@@ -28,13 +25,14 @@ class Search extends Component {
     console.log(this.state.text);
     this.setState({
       text: "",
+      validEntry: true,
     });
   };
 
   render() {
     return (
       <div>
-        <form onSubmit={this.onSubmit} className="form">
+        <form onSubmit={this.onSubmit} className="form form-test">
           <input
             name="text"
             type="text"
@@ -44,7 +42,7 @@ class Search extends Component {
             onChange={this.handleChange}
             required
           />
-          <input type="submit" className="btn btn-dark btn-block" />
+          <input type="submit" className="btn btn-dark btn-block btn-test" />
         </form>
       </div>
     );

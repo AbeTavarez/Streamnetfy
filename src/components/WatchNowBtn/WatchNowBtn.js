@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import "./WatchNowBtn.css";
 
-const WatchNowBtn = ({ network }) => {
+const WatchNowBtn = (props) => {
   return (
-    <div className="watchnow">
-      <h3>Watch Now</h3>
+    <div className="primary" type="netflix">
+      <h4>Watch now</h4>
+      {/* <button className={props.type}>{props.lable}</button> */}
       {/* <h6>{network}</h6>
       <div>
         {network.map((net) => {
