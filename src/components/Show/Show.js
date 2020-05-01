@@ -6,30 +6,31 @@ class Show extends Component {
     super(props);
 
     const currentShow = this.props.tvshows.find(
-      (show) => show.name === this.props.match.params.name
+      (show) => show.show.name === this.props.match.params.name
     );
 
     this.state = {
-      show: currentShow,
+      shows: currentShow,
     };
   }
 
   render() {
-    // console.log("show data->", this.state.show);
+    console.log("curr data->", this.props.currentShow);
+    console.log("props data->", this.props.tvshows);
+    console.log("sate data->", this.state.shows);
     return (
       <div className="card grid-2">
-        <h1>Show component</h1>
-        {/* <div>
-          <h3>{this.state.show.name}</h3>
-          {this.state.show.genres.map((genre) => (
+        <div>
+          <h3>{this.state.shows.show.name}</h3>
+          {this.state.shows.show.genres.map((genre) => (
             <p>{genre}</p>
           ))}
-          <p>{this.state.show.summary}</p>
-          <h6>{this.state.show.premiered}</h6>
+          <p>{this.state.shows.show.summary}</p>
+          <h6>{this.state.shows.show.premiered}</h6>
         </div>
         <div className="all-center">
-          <img src={this.state.show.image.original} />
-        </div> */}
+          <img src={this.state.shows.show.image.original} />
+        </div>
       </div>
     );
   }

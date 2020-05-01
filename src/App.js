@@ -29,13 +29,14 @@ class App extends Component {
     this.state = {
       tvshows: [],
       showsbyPage: [],
-      loading: false,
+      isLoading: false,
+      isSearching: false,
     };
   }
   //* Fetch full list of shows by page
   async componentDidMount() {
     this.setState({
-      loading: true,
+      isLoading: true,
     });
     //* MAIN CALL
     const res = await axios.get(`${BASE_URL}`);
@@ -43,7 +44,7 @@ class App extends Component {
       showsbyPage: res.data,
     });
     this.setState({
-      loading: false,
+      isLoading: false,
     });
   }
   //* Search for show name
@@ -53,10 +54,12 @@ class App extends Component {
     const res = await axios.get(`${SEARCH_URL}${showName}`);
     this.setState({
       tvshows: res.data,
+      isSearching: true,
     });
-    this.setState({
-      showsbyPage: [],
-    });
+    // this.setState({
+    //   showsbyPage: res.data,
+    //   isSearching: true,
+    // });
   };
 
   clearShowbyPage = () => {
@@ -74,31 +77,28 @@ class App extends Component {
             <Route>
               <NavBar />
               <Header />
-
               <Search
                 tvShows={this.state.tvshows}
                 searchShows={this.searchShows}
               />
-              <Fragment>
-                <div className="container">
+
+              <div className="container">
+                <Switch>
                   <Route exact path="/">
                     <ShowResults tvshows={this.state.tvshows} />
-                  </Route>
-                  <Route exact path="/results/:name">
-                    <Show tvshows={this.state.tvshows} />
-                  </Route>
-
-                  <Route exact path="/">
                     <ShowPages showsbypages={this.state.showsbyPage} />
                   </Route>
 
                   <Route exact path="/show/:name">
                     <ShowPage showsbypages={this.state.showsbyPage} />
                   </Route>
+                  <Route exact path="/results/:name">
+                    <Show tvshows={this.state.tvshows} />
+                  </Route>
+                </Switch>
+              </div>
 
-                  <Route exact path="/about" component={About} />
-                </div>
-              </Fragment>
+              <Route exact path="/about" component={About} />
               <Footer />
             </Route>
             <Route></Route>
@@ -108,5 +108,13 @@ class App extends Component {
     );
   }
 }
+{
+  /* <ShowPages showsbypages={this.state.showsbyPage} /> */
+}
 
+{
+  /* <Route exact path="/show/:name">
+<ShowPage showsbypages={this.state.showsbyPage} />
+</Route> */
+}
 export default App;
