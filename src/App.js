@@ -28,13 +28,15 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      tvshows: [],
-      showsbyPage: [],
+      showsbyPage: [], // all shows
+      tvshows: [], // search shows
       isLoading: false,
       isSearching: false,
       alert: null,
     };
   }
+
+
   //* Fetch full list of shows by page
   async componentDidMount() {
     this.setState({
@@ -42,6 +44,7 @@ class App extends Component {
     });
     //* MAIN CALL
     const res = await axios.get(`${BASE_URL}`);
+    console.log(res.data);
     this.setState({
       showsbyPage: res.data,
     });
@@ -49,6 +52,8 @@ class App extends Component {
       isLoading: false,
     });
   }
+
+
   //* Search for show name
   //* func is pass down in props to Search Component
   //* but sets this Component state
@@ -58,8 +63,10 @@ class App extends Component {
       isSearching: true,
     });
     const res = await axios.get(`${SEARCH_URL}${showName}`);
+    console.log(res.data);
     this.setState({
       tvshows: res.data,
+      showsbyPage: [],
       isLoading: false,
       isSearching: false,
     });
@@ -87,11 +94,11 @@ class App extends Component {
       <div className="App">
         <Router>
           <Switch>
+
             <Route>
               <NavBar />
               <Header />
               <Search
-                tvShows={this.state.tvshows}
                 searchShows={this.searchShows}
                 setAlert={this.alert}
               />
@@ -121,7 +128,7 @@ class App extends Component {
               <Route exact path="/about" component={About} />
               <Footer />
             </Route>
-            <Route></Route>
+
           </Switch>
         </Router>
       </div>

@@ -50,10 +50,3 @@ class Search extends Component {
 }
 
 export default Search;
-
-// {this.state.tvshows.map((show) => (
-//   <div>
-//     <h3>{show.show.name}</h3>
-//     <img src={show.show.image.original} />
-//   </div>
-// ))}

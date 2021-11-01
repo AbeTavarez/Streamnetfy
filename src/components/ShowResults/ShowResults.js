@@ -5,17 +5,19 @@ import WatchNowBtn from "../WatchNowBtn/WatchNowBtn";
 import Loading from "../Loading/Loading";
 
 const ShowResults = ({ tvshows, isLoading }) => {
-  // console.log("sr-->", tvshows);
+  console.log("sr-->", tvshows);
 
   if (isLoading) return <Loading />;
   return (
     <div>
-      {tvshows.map((show, idx) => (
+      {tvshows ? tvshows.map((show, idx) => (
         <div key={idx}>
           <Link to={"/results/" + show.show.name} key={idx}>
             <div className="card grid-2">
               <div className="all-center">
-                <img src={show.show.image.original} />
+                {!show.show.image ? <p>No Image</p> : 
+                  <img src={show.show.image.original}/>
+                }
               </div>
               <div>
                 <div>
@@ -32,7 +34,7 @@ const ShowResults = ({ tvshows, isLoading }) => {
             </div>
           </Link>
         </div>
-      ))}
+      )) : <h1>Not Found</h1>}
     </div>
   );
 };
