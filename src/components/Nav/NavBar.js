@@ -11,6 +11,7 @@ export const NavBar = () => {
             <Link to="/">Streamnetfy</Link>
           </p>
         </div>
+        
         <div>
           <ul id="nav-mobile" className="nav-btn">
             <li>

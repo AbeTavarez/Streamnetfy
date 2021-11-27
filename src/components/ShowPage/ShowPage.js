@@ -27,7 +27,8 @@ class ShowPage extends Component {
           {this.state.shows.genres.map((genre) => (
             <span key={genre}>{genre}</span>
           ))}
-          <p>{this.state.shows.summary}</p>
+          {/* <p>{this.state.shows.summary}</p> */}
+          <span dangerouslySetInnerHTML={{__html: this.state.shows.summary}}></span>
         </div>
         <div>
           <img src={this.state.shows.image.original} />

@@ -25,7 +25,8 @@ class Show extends Component {
           {this.state.shows.show.genres.map((genre) => (
             <p>{genre}</p>
           ))}
-          <p>{this.state.shows.show.summary}</p>
+          {/* <p>{this.state.shows.show.summary}</p> */}
+          <p dangerouslySetInnerHTML={{__html: this.state.shows.show.summary}}></p>
           <h6>{this.state.shows.show.premiered}</h6>
         </div>
         <div className="all-center">

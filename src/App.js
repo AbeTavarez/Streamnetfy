@@ -93,11 +93,12 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Switch>
+          {/* <Switch> */}
 
             <Route>
               <NavBar />
               <Header />
+              
               <Search
                 searchShows={this.searchShows}
                 setAlert={this.alert}
@@ -119,6 +120,7 @@ class App extends Component {
                   <Route exact path="/show/:name">
                     <ShowPage showsbypages={this.state.showsbyPage} />
                   </Route>
+                  
                   <Route exact path="/results/:name">
                     <Show tvshows={this.state.tvshows} />
                   </Route>
@@ -129,7 +131,7 @@ class App extends Component {
               <Footer />
             </Route>
 
-          </Switch>
+          {/* </Switch> */}
         </Router>
       </div>
     );

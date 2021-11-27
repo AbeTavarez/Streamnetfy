@@ -22,7 +22,7 @@ class Search extends Component {
   onSubmit = (e) => {
     e.preventDefault();
     this.props.searchShows(this.state.text);
-    console.log(this.state.text);
+    // console.log(this.state.text);
     this.setState({
       text: "",
       validEntry: true,
