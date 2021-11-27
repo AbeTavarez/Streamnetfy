@@ -30,7 +30,7 @@ class ShowPage extends Component {
           {/* <p>{this.state.shows.summary}</p> */}
           <span dangerouslySetInnerHTML={{__html: this.state.shows.summary}}></span>
         </div>
-        <div>
+        <div className="card-image">
           <img src={this.state.shows.image.original} />
         </div>
       </div>

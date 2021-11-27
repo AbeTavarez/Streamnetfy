@@ -27,3 +27,15 @@
 .logo-int {
   margin-left: 20px;
 }
+
+@media  (max-width: 400px){
+  .nav-wrapper {
+    display: flex;
+  }  
+  .brand-logo {
+    justify-content: center;
+  }
+  #nav-mobile {
+    justify-content: flex-end;
+  }
+}

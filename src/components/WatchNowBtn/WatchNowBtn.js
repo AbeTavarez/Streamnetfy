@@ -3,8 +3,8 @@ import "./WatchNowBtn.css";
 
 const WatchNowBtn = (props) => {
   return (
-    <div className="primary" type="netflix">
-      <h4>Watch now</h4>
+    <div className="btn primary" type="netflix">
+      Watch Now!
       {/* <button className={props.type}>{props.lable}</button> */}
       {/* <h6>{network}</h6>
       <div>

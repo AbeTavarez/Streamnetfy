@@ -13,12 +13,12 @@ const ShowPages = ({ showsbypages, isLoading }) => {
     <div key={show.id}>
       <Link to={"/show/" + show.name} key={idx}>
         <div className="card grid-2">
-          <div className="all-center">
+          <div className="all-center card-image">
             <img src={show.image.original} />
           </div>
           <div>
-            <div>
-              <h3>{show.name}</h3>
+            <div className="card-content">
+              <h4>{show.name}</h4>
               <p>{show.language}</p>
               <p>{show.runtime}m</p>
               {show.genres.map((genre) => (

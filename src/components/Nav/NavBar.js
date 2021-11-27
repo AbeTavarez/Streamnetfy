@@ -6,7 +6,7 @@ export const NavBar = () => {
   return (
     <nav>
       <div className="nav-wrapper">
-        <div className="brand-logo site-name">
+        <div className="brand-logo site-name right">
           <p className="logo-int">
             <Link to="/">Streamnetfy</Link>
           </p>
